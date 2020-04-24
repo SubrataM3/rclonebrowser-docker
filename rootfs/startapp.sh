@@ -20,7 +20,7 @@ getpid_rclonebrowser() {
         fi
     fi
     if [ "$PID" = "UNSET" ]; then
-        PID="$(ps -o pid,args | grep -w "rclone" | grep -vw grep | tr -s ' ' | cut -d' ' -f2)"
+        PID="$(ps -o pid,args | grep -w "rclone-browser" | grep -vw grep | tr -s ' ' | cut -d' ' -f2)"
     fi
     echo "${PID:-UNSET}"
 }
